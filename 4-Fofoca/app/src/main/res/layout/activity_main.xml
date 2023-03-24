@@ -8,68 +8,47 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/mainEtFofoca"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="5"
         android:gravity="center"
-        android:layout_margin="50dp"/>
+        android:layout_margin="50dp"
+        android:text="Jogo da fofoca"
+        android:textSize="32dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center">
-
-            <RadioGroup
-                android:id="@+id/mainRadioGroup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/mainRbVerdade"
-                    android:text="Verdade"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/mainRbMentira"
-                    android:text="Mentira"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                </LinearLayout>
-            </RadioGroup>
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center">
+        android:orientation="vertical">
 
     <Button
-        android:id="@+id/mainBtnSalvar"
-        android:layout_width="wrap_content"
+        android:id="@+id/mainBtnCadastrar"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Salvar"
+        android:text="Cadastrar"
         />
-
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/mainBtnJogar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Jogar"
+            />
+    </LinearLayout>
+
 
 
 </LinearLayout>

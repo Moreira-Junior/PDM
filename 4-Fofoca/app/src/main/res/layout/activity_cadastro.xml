@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FofocaActivity">
+    tools:context=".CadastroActivity">
 
-    <TextView
-        android:id="@+id/fofocaTvFofoca"
+    <EditText
+        android:id="@+id/cadastroEtFofoca"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:gravity="center"
         android:layout_margin="50dp"/>
 
@@ -31,18 +31,17 @@
             android:gravity="center">
 
             <RadioGroup
-                android:id="@+id/fofocaradioGroup"
+                android:id="@+id/cadastroRadioGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                     <RadioButton
-                        android:id="@+id/fofocaRbVerdade"
+                        android:id="@+id/cadastroRbVerdade"
                         android:text="Verdade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <RadioButton
-                        android:id="@+id/fofocaRbMentira"
+                        android:id="@+id/cadastroRbMentira"
                         android:text="Mentira"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -58,39 +57,25 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/fofocaBtnRespoder"
+            android:id="@+id/cadastroBtnSalvar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Responder"
+            android:text="Salvar"
+            android:layout_margin="20dp"
             />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        >
-        <ProgressBar
-            android:id="@+id/fofocaProgressBar1"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:max="100"
-            android:progress="0"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            />
-        <ProgressBar
-            android:id="@+id/fofocaProgressBar2"
-            android:max="100"
-            android:progress="0"
+        <Button
+            android:id="@+id/cadastroBtnVoltar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+            android:gravity="center"
+            android:text="Voltar"
+            android:layout_margin="20dp"
+            />
 
     </LinearLayout>
+
+
 
 
 </LinearLayout>
