@@ -22,7 +22,7 @@ class FofocaActivity : AppCompatActivity(){
     private lateinit var progressBar2: ProgressBar
     private lateinit var jogo: Jogo
     private var estadoFofoca: Boolean = false
-//    private lateinit var fofoca: Fofoca
+    private var fofoca: Fofoca? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,9 +37,9 @@ class FofocaActivity : AppCompatActivity(){
         this.progressBar2 = findViewById(R.id.fofocaProgressBar2)
         this.jogo = this.intent.getSerializableExtra("jogo") as Jogo
         if(this.intent.hasExtra("jogo")){
-            responder()
+            this.fofoca = this.jogo.getFofoca()
+            this.tvFofoca.text = this.fofoca?.getDescricao()
         }
-        this.radioGroup.setOnCheckedChangeListener(RadioGroupChange())
         this.btnResponder.setOnClickListener({responder()})
 
     }
@@ -54,11 +54,12 @@ class FofocaActivity : AppCompatActivity(){
     }
 
     fun responder(){
-        val tempFofoca = this.jogo.getFofoca()
+        val tempFofoca = this.fofoca
         if(tempFofoca != null){
-            this.tvFofoca.text = tempFofoca.getDescricao()
             verificarAcerto(tempFofoca)
             tempFofoca.setLida()
+            this.fofoca = this.jogo.getFofoca()
+            this.tvFofoca.text = this.fofoca?.getDescricao() ?: "Acabaram as fofocas!"
         } else{
             this.tvFofoca.text = "Acabaram as fofocas!"
         }
@@ -66,26 +67,16 @@ class FofocaActivity : AppCompatActivity(){
 
     fun verificarAcerto(fofoca: Fofoca){
         if(fofoca.isVerdadeiro()){
-            if(this.estadoFofoca){
-                Toast.makeText(this, "Acertou!!!", Toast.LENGTH_SHORT)
+            if(this.rbVerdade.isChecked){
+                Toast.makeText(this, "Acertou!!!", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Errou!!!", Toast.LENGTH_SHORT)
+                Toast.makeText(this, "Errou!!!", Toast.LENGTH_SHORT).show()
             }
         } else{
-            if(this.estadoFofoca){
-                Toast.makeText(this, "Acertou!!!", Toast.LENGTH_SHORT)
+            if(this.rbMentira.isChecked){
+                Toast.makeText(this, "Acertou!!!", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Errou!!!", Toast.LENGTH_SHORT)
-            }
-        }
-    }
-
-    inner class RadioGroupChange : RadioGroup.OnCheckedChangeListener {
-        override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
-            if(checkedId == R.id.cadastroRbVerdade){
-                this@FofocaActivity.estadoFofoca = true
-            } else {
-                this@FofocaActivity.estadoFofoca = false
+                Toast.makeText(this, "Errou!!!", Toast.LENGTH_SHORT).show()
             }
         }
     }
