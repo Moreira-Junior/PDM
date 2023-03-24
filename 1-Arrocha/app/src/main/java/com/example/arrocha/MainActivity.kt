@@ -2,6 +2,8 @@ package com.example.arrocha
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.view.View.OnClickListener
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -34,5 +36,16 @@ class MainActivity : AppCompatActivity() {
         this.tvMenor.text = this.arrocha.limiteInferior.toString()
         this.tvMaior.text = this.arrocha.limiteSuperior.toString()
         this.tvFeedback.text = this.arrocha.feedback.toString()
+        this.btnChutar.setOnClickListener(ChuteOnClick())
+    }
+
+    inner class ChuteOnClick : OnClickListener {
+        override fun onClick(v: View?) {
+            this@MainActivity.arrocha.chutar(Integer.parseInt(this@MainActivity.etChute.text.toString()))
+            this@MainActivity.etChute.text.clear()
+            this@MainActivity.tvMenor.text = this@MainActivity.arrocha.limiteInferior.toString()
+            this@MainActivity.tvMaior.text = this@MainActivity.arrocha.limiteSuperior.toString()
+            this@MainActivity.tvFeedback.text = this@MainActivity.arrocha.feedback.toString()
+        }
     }
 }
