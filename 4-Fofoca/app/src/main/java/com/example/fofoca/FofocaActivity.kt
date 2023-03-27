@@ -42,14 +42,15 @@ class FofocaActivity : AppCompatActivity(){
         }
         this.btnResponder.setOnClickListener({responder()})
 
+        iniciaTempo()
     }
-    private fun progress(){
+    fun iniciaTempo(){
         Thread{
             while (this.progressBar1.progress < 100){
                 this.progressBar1.progress += 1
                 Thread.sleep(100)
             }
-            this.progressBar2.visibility = View.INVISIBLE
+            finish()
         }.start()
     }
 
