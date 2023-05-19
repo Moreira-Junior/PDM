@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Fragments</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="sobre_array">
+        <item>@string/titulo_sobre</item>
+        <item>@string/insercao_sobre</item>
+        <item>@string/quando_sobre</item>
+        <item>@string/descricao_sobre</item>
+        <item>@string/vantagens_sobre</item>
+        <item>@string/vantagem1_sobre</item>
+        <item>@string/vantagem2_sobre</item>
+        <item>@string/desvantagens_sobre</item>
+        <item>@string/desvantagem1_sobre</item>
+        <item>@string/desvantagem2_sobre</item>
+        <item>@string/aplicacoes_sobre</item>
+        <item>@string/aplicacao1_sobre</item>
+        <item>@string/aplicacao2_sobre</item>
+    </string-array>
+
+    <string name="titulo_sobre">O que é Android Fragments?</string>
+    <string name="descricao_sobre">- Fragments são componentes de interface de usuário reutilizáveis e modulares no Android.</string>
+    <string name="descricao2_sobre">- Eles representam uma parte ou uma seção de uma interface de usuário em um aplicativo Android.</string>
+    <string name="insercao_sobre">Inserção no Android</string>
+    <string name="insercao1_sobre">- Os Fragments foram introduzidos no Android a partir da versão 3.0 (API level 11) como parte do Android Jetpack.</string>
+    <string name="quando_sobre">Quando usar Fragments?</string>
+    <string name="quando_sobre1">- Fragments são usados em situações em que é necessário dividir a interface do usuário em partes independentes e reutilizáveis.</string>
+    <string name="quando_sobre2">- Eles são úteis quando você precisa de componentes modulares que possam ser adicionados, substituídos ou removidos dinamicamente em tempo de execução.</string>
+    <string name="vantagens_sobre">Vantagens dos Android Fragments</string>
+    <string name="vantagem1_sobre">- Reutilização de componentes de interface de usuário</string>
+    <string name="vantagem2_sobre">- Gerenciamento simplificado do ciclo de vida</string>
+    <string name="desvantagens_sobre">Desvantagens dos Android Fragments</string>
+    <string name="desvantagem1_sobre">- Complexidade adicional na comunicação entre fragments e atividades</string>
+    <string name="desvantagem2_sobre">- Possíveis problemas de compatibilidade com versões mais antigas do Android</string>
+    <string name="aplicacoes_sobre">Principais aplicações dos Android Fragments</string>
+    <string name="aplicacao1_sobre">- Navegação por guias: Use Fragments para criar uma interface com guias (tabbed interface), onde cada guia representa um Fragment diferente.</string>
+    <string name="aplicacao2_sobre">- Fluxo de cadastro: Em um aplicativo de cadastro, você pode dividir o processo em etapas usando Fragments.</string>
+    <string name="aplicacao3_sobre">- Fluxo de carrinho de compras: Em um aplicativo de compras, você pode usar Fragments para representar as diferentes etapas do fluxo de compra, como seleção de produtos, revisão do carrinho e finalização da compra.</string>
+    <string name="aplicacao4_sobre">- Multi-janela: Ao lidar com dispositivos que suportam várias janelas, como Chromebooks, você pode usar Fragments para criar interfaces adaptáveis que se ajustam a diferentes tamanhos e layouts de janelas.</string>
+</resources>
